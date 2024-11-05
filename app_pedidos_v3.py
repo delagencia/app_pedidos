@@ -251,7 +251,6 @@ def main():
             if user_info and user_info["password"] == password:
                 st.session_state.user_state['logged_in'] = True
                 st.session_state.user_state['username'] = username
-                st.session_state.user_state['name'] = user_info['name']
                 st.rerun()  # Recarga la página después del login
             else:
                 st.warning('Usuario / contraseña incorrecto')
@@ -260,7 +259,7 @@ def main():
     else:
         aplicar_imagenes_y_formato()
         st.title("Procesamiento de Pedidos")
-        st.success(f"¡Bienvenido {st.session_state.user_state['name']}!")
+        st.success(f"¡Bienvenido!")
 
         # Cargar archivos usando `file_uploader_key`
         uploaded_files = st.file_uploader("Cargar archivos Excel", type="xlsx", accept_multiple_files=True, key=st.session_state.file_uploader_key)
