@@ -295,4 +295,7 @@ def main():
             logout_user()
             st.session_state.user_state['logged_in'] = False
             st.session_state.file_uploader_key += 1  # Resetea el uploader al cerrar sesión
-            st.rerun()  # Forzar la recarga des
+            st.rerun()  # Forzar la recarga después de cerrar sesión
+
+if __name__ == "__main__":
+    main()
