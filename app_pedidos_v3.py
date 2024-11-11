@@ -218,7 +218,7 @@ def aplicar_imagenes_y_formato():
     col1, col2, col3 = st.columns([1, 6, 1])
         
     with col1:
-        st.image('resources/logo.jpg', width=190)
+        st.image('resources/logo.jpg', width=220)
 
     with col3:
         st.image('resources/delagencia_sl_logo.jpg', width=90)
